@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #F6F4EE;
+    --bg-surface: #EFECE4;
+    --bg-card: #FFFFFF;
+    --text-ink: #0F1A14;
+    --text-muted: #526056;
+    --brand-green: #2FA35B;
+    --brand-green-hover: #268549;
+    --brand-green-text: #1F7A43;
+    --brand-green-subtle: rgba(47, 163, 91, 0.12);
+    --border-subtle: rgba(15, 26, 20, 0.1);
+    --border-medium: rgba(15, 26, 20, 0.18);
+    --selection-bg: rgba(47, 163, 91, 0.22);
+    --focus-ring: #2FA35B;
+  }
+
+  .dark {
+    --bg-primary: #0B120E;
+    --bg-surface: #131D17;
+    --bg-card: #18241E;
+    --text-ink: #F0F4F1;
+    --text-muted: #94A398;
+    --brand-green: #34B867;
+    --brand-green-hover: #289953;
+    --brand-green-text: #34B867;
+    --brand-green-subtle: rgba(52, 184, 103, 0.15);
+    --border-subtle: rgba(240, 244, 241, 0.1);
+    --border-medium: rgba(240, 244, 241, 0.2);
+    --selection-bg: rgba(52, 184, 103, 0.3);
+    --focus-ring: #34B867;
+  }
+
+  * {
+    border-color: var(--border-subtle);
+  }
+
+  ::selection {
+    background-color: var(--selection-bg);
+    color: var(--text-ink);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color: var(--text-ink);
+    background-color: var(--bg-primary);
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-ink);
+    font-family: var(--font-sans), system-ui, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.6;
+    transition: background-color 0.25s ease, color 0.25s ease;
+  }
+
+  /* Paper grain overlay for light theme */
+  html:not(.dark) body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.028;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  }
+
+  /* Focus visible accessibility */
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-serif-display {
+  font-family: var(--font-serif), Georgia, serif;
+}
+
+.font-mono-numbers {
+  font-family: var(--font-mono), monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Smooth Tabular Animations */
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-medium);
+  border-radius: 4px;
+}
