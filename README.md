@@ -2,7 +2,7 @@
 
 > **Founding Software Engineering Intern Assignment Submission**  
 > *Author:* Amitesh Kumar Dubey  
-> *Live Demo Placeholder:* [https://fermor-homepage.vercel.app](https://fermor-homepage.vercel.app)
+> *Live Demo:* Deploy on Vercel to generate live URL (e.g. `https://fermor-homepage-amitesh.vercel.app`)
 
 ---
 
