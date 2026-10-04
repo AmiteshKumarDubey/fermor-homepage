@@ -21,7 +21,7 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
 
-      const sections = ["tools", "story", "life-stage", "principles"];
+      const sections = ["tools", "story", "privacy", "principles"];
       const scrollPos = window.scrollY + 200;
 
       for (const sectionId of sections) {
@@ -41,7 +41,6 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Trap focus & Escape key for mobile menu
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape" && mobileMenuOpen) {
@@ -62,14 +61,13 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
 
   const navLinks = [
     { id: "tools", label: COPY.nav.tools, href: "#tools" },
-    { id: "story", label: COPY.nav.guides, href: "#story" },
-    { id: "life-stage", label: COPY.nav.method, href: "#life-stage" },
+    { id: "story", label: COPY.nav.howItWorks, href: "#story" },
+    { id: "privacy", label: COPY.nav.privacy, href: "#privacy" },
     { id: "principles", label: COPY.nav.principles, href: "#principles" },
   ];
 
   return (
     <>
-      {/* Accessibility Skip Link */}
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-[var(--brand-green)] focus:text-[#0F1A14] focus:font-semibold focus:rounded-md focus:shadow-lg"
@@ -85,12 +83,10 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
         }`}
       >
         <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
-          {/* Left: Brand Logo */}
           <Link href="/" className="group flex items-center gap-2" aria-label="Fermor Homepage">
             <Logo />
           </Link>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-1 bg-[var(--bg-surface)] px-3 py-1.5 rounded-full border border-[var(--border-subtle)]">
             {navLinks.map((link) => {
               const isActive = activeSection === link.id;
@@ -110,9 +106,7 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
             })}
           </nav>
 
-          {/* Right Actions */}
           <div className="flex items-center gap-2.5">
-            {/* Command Palette Launcher Hint */}
             <button
               onClick={onOpenCommandPalette}
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono-numbers text-[var(--text-muted)] bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-md hover:border-[var(--brand-green)] hover:text-[var(--text-ink)] transition-colors"
@@ -123,7 +117,6 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
               <span>{COPY.nav.commandHint}</span>
             </button>
 
-            {/* Theme Toggle Button */}
             <button
               onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
               className="p-2 rounded-md text-[var(--text-muted)] hover:text-[var(--text-ink)] hover:bg-[var(--bg-surface)] border border-transparent hover:border-[var(--border-subtle)] transition-colors"
@@ -137,15 +130,13 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
               )}
             </button>
 
-            {/* Primary CTA Button (WCAG AA: Solid Brand Green background with Dark Ink text) */}
             <a
-              href="#tools"
+              href="#playground"
               className="hidden sm:inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-[#0F1A14] bg-[var(--brand-green)] hover:bg-[var(--brand-green-hover)] rounded-lg transition-colors shadow-xs active:scale-[0.98]"
             >
               {COPY.nav.startFree}
             </a>
 
-            {/* Mobile Hamburger Button */}
             <button
               onClick={() => setMobileMenuOpen(true)}
               className="md:hidden p-2.5 rounded-lg text-[var(--text-ink)] hover:bg-[var(--bg-surface)]"
@@ -157,7 +148,6 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
         </div>
       </header>
 
-      {/* Mobile Full-Screen Navigation Menu */}
       {mobileMenuOpen && (
         <div
           className="fixed inset-0 z-50 bg-[var(--bg-primary)] flex flex-col px-6 py-6 transition-opacity"
@@ -201,7 +191,7 @@ export function Header({ onOpenCommandPalette }: HeaderProps) {
               <span>Search & Presets (Ctrl + K)</span>
             </button>
             <a
-              href="#tools"
+              href="#playground"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full py-3 px-4 text-center font-medium text-[#0F1A14] bg-[var(--brand-green)] rounded-lg shadow-sm"
             >

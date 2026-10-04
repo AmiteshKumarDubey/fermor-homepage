@@ -49,17 +49,17 @@ export function HeroSection() {
               {COPY.brand.heroSubhead}
             </p>
 
-            {/* Audience Line (Point #8) */}
+            {/* Audience Line */}
             <div className="flex items-start gap-2.5 p-3.5 bg-[var(--bg-surface)] border border-[var(--border-subtle)] rounded-xl text-xs text-[var(--text-ink)] font-sans leading-relaxed">
               <Users className="w-4 h-4 text-[var(--brand-green-text)] shrink-0 mt-0.5" />
               <span>{COPY.brand.heroAudience}</span>
             </div>
 
-            {/* CTAs (Point #9: scroll to #playground) */}
-            <div className="flex flex-wrap items-center gap-4 pt-1">
+            {/* CTAs: Full width on mobile (w-full sm:w-auto) */}
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-1">
               <a
                 href="#playground"
-                className="inline-flex items-center gap-2 px-6 py-3 text-sm font-medium text-[#0F1A14] bg-[var(--brand-green)] hover:bg-[var(--brand-green-hover)] rounded-xl transition-all shadow-sm active:scale-[0.98]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 text-sm font-medium text-[#0F1A14] bg-[var(--brand-green)] hover:bg-[var(--brand-green-hover)] rounded-xl transition-all shadow-sm active:scale-[0.98]"
               >
                 <span>{COPY.brand.ctaPrimary}</span>
                 <ArrowRight className="w-4 h-4" />
@@ -67,7 +67,7 @@ export function HeroSection() {
 
               <a
                 href="#story"
-                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium text-[var(--brand-green-text)] hover:bg-[var(--brand-green-subtle)] rounded-xl transition-colors border border-[var(--border-subtle)]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 text-sm font-medium text-[var(--brand-green-text)] hover:bg-[var(--brand-green-subtle)] rounded-xl transition-colors border border-[var(--border-subtle)]"
               >
                 <Calculator className="w-4 h-4" />
                 <span>{COPY.brand.ctaSecondary}</span>
@@ -79,7 +79,7 @@ export function HeroSection() {
               <span>{COPY.brand.trustBadge}</span>
             </div>
 
-            {/* Mobile Hero Compact Interactive Playground (Screens < 1024px) */}
+            {/* Mobile Hero Compact Interactive Playground */}
             <div className="block lg:hidden pt-4">
               <HeroCompactPlayground
                 heroState={heroState}
@@ -89,7 +89,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Column: Hero Compact Interactive Playground (Desktop >= 1024px) */}
+          {/* Right Column: Desktop Hero Compact Interactive Playground */}
           <div className="hidden lg:block lg:col-span-6">
             <HeroCompactPlayground
               heroState={heroState}
@@ -126,7 +126,8 @@ function HeroCompactPlayground({
             Quick Interactive Playground
           </span>
         </div>
-        <span className="text-[11px] tabular-nums text-[var(--text-muted)] bg-[var(--bg-surface)] px-2 py-0.5 rounded border border-[var(--border-subtle)]">
+        {/* whitespace-nowrap prevents badge from wrapping onto two lines on mobile */}
+        <span className="text-[11px] tabular-nums whitespace-nowrap text-[var(--text-muted)] bg-[var(--bg-surface)] px-2 py-0.5 rounded border border-[var(--border-subtle)]">
           {formatRupeeCompact(heroState.goal)} in {heroState.years} yrs
         </span>
       </div>

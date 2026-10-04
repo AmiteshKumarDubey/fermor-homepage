@@ -76,13 +76,12 @@ export function WaitlistSection() {
             <div className="p-6 bg-[var(--brand-green-subtle)] border border-[var(--border-medium)] rounded-2xl flex items-center gap-4 text-[var(--brand-green-text)] font-sans animate-in fade-in zoom-in-95">
               <CheckCircle2 className="w-8 h-8 shrink-0 text-[var(--brand-green-text)]" />
               <div className="space-y-1">
-                <h4 className="font-semibold text-base">You&apos;re on the early access list!</h4>
+                <h4 className="font-semibold text-base">You&apos;re subscribed!</h4>
                 <p className="text-xs text-[var(--text-muted)]">{COPY.waitlist.successMsg}</p>
               </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-6 font-sans">
-              {/* Honeypot anti-bot field */}
               <div className="sr-only" aria-hidden="true">
                 <label htmlFor="website">Do not fill this out if you are human:</label>
                 <input
@@ -96,7 +95,6 @@ export function WaitlistSection() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                {/* Name */}
                 <div className="space-y-1.5">
                   <label htmlFor="waitlist-name" className="block text-xs font-medium text-[var(--text-ink)]">
                     {COPY.waitlist.nameLabel}
@@ -111,7 +109,6 @@ export function WaitlistSection() {
                   />
                 </div>
 
-                {/* Email */}
                 <div className="space-y-1.5">
                   <label htmlFor="waitlist-email" className="block text-xs font-medium text-[var(--text-ink)]">
                     {COPY.waitlist.emailLabel}
@@ -136,7 +133,6 @@ export function WaitlistSection() {
                 </div>
               </div>
 
-              {/* Planning Select */}
               <div className="space-y-1.5">
                 <label htmlFor="waitlist-goal" className="block text-xs font-medium text-[var(--text-ink)]">
                   {COPY.waitlist.planningLabel}
@@ -162,7 +158,6 @@ export function WaitlistSection() {
                 </div>
               )}
 
-              {/* Submit Button (WCAG AA: Solid brand green background with dark ink text) */}
               <button
                 type="submit"
                 disabled={isSubmitting}

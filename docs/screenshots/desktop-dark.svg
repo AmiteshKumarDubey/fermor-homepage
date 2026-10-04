@@ -1,0 +1,20 @@
+<svg width="1200" height="675" viewBox="0 0 1200 675" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="675" fill="#0B120E"/>
+  <rect x="60" y="40" width="1080" height="60" rx="12" fill="#131D17" stroke="#243329" stroke-width="1"/>
+  <circle cx="95" cy="70" r="10" fill="#34B867"/>
+  <text x="115" y="76" fill="#F0F4F1" font-family="sans-serif" font-size="20" font-weight="bold">Fermor</text>
+  <rect x="920" y="52" width="100" height="36" rx="8" fill="#34B867"/>
+  <text x="940" y="75" fill="#0F1A14" font-family="sans-serif" font-size="14" font-weight="bold">Start free</text>
+  
+  <text x="60" y="160" fill="#34B867" font-family="sans-serif" font-size="14">Personal Finance for India</text>
+  <text x="60" y="210" fill="#F0F4F1" font-family="serif" font-size="44">Begin your financial momentum.</text>
+  <text x="60" y="250" fill="#94A398" font-family="sans-serif" font-size="16">Clarity for every money decision. We show the full arithmetic.</text>
+  
+  <rect x="580" y="140" width="560" height="480" rx="16" fill="#18241E" stroke="#243329" stroke-width="1"/>
+  <text x="610" y="180" fill="#F0F4F1" font-family="sans-serif" font-size="16" font-weight="bold">Quick Interactive Playground</text>
+  <rect x="610" y="210" width="240" height="70" rx="10" fill="#153621"/>
+  <text x="625" y="235" fill="#94A398" font-family="sans-serif" font-size="12">REQUIRED MONTHLY SIP</text>
+  <text x="625" y="265" fill="#34B867" font-family="sans-serif" font-size="24" font-weight="bold">₹43,041 / mo</text>
+  
+  <path d="M 610 540 Q 750 500 1110 360" stroke="#34B867" stroke-width="4" fill="none"/>
+</svg>

@@ -12,8 +12,8 @@ export const COPY = {
   },
   nav: {
     tools: "Tools",
-    guides: "Guides",
-    method: "Method",
+    howItWorks: "How it works",
+    privacy: "Privacy",
     principles: "Principles",
     commandHint: "Ctrl K",
     startFree: "Start free",
@@ -120,7 +120,7 @@ export const COPY = {
   privacy: {
     badge: "Browser-only calculations",
     title: "Your numbers never leave this page.",
-    subtitle: "We believe privacy is an engineering commitment, not a policy document. Watch our zero-data guarantee in real time.",
+    subtitle: "Watch it in real time.",
     explanation: "While you use the tools, nothing is sent anywhere. This counter shows requests made since you started.",
     counterLabel: "Network requests since you started using the tool",
     guaranteeText: "Calculations run 100% locally in your client's JS runtime.",
@@ -187,14 +187,14 @@ export const COPY = {
     ],
   },
   waitlist: {
-    title: "Get early access to Fermor tools",
+    title: "Get product updates",
     subtitle: "Join thoughtful Indian earners getting financial clarity delivered straight to their inbox.",
     nameLabel: "Your Name (Optional)",
     emailLabel: "Email Address *",
     planningLabel: "What financial milestone are you planning for?",
-    submitBtn: "Join Waitlist",
+    submitBtn: "Subscribe",
     submitting: "Submitting...",
-    successMsg: "You're on the list! We'll reach out as soon as new tools launch.",
+    successMsg: "You're subscribed! We'll reach out as soon as new tools launch.",
     errorMsg: "Something went wrong. Please verify your details and try again.",
   },
   footer: {

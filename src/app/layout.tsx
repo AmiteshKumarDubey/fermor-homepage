@@ -26,11 +26,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Fermor — Begin your financial momentum",
   description: "Personal finance platform for India. Financial clarity through transparent arithmetic, zero login walls, and 100% browser-side calculations.",
-  metadataBase: new URL("https://fermor.in"),
+  metadataBase: new URL("https://fermor-homepage-jjzh.vercel.app"),
   openGraph: {
     title: "Fermor — Begin your financial momentum",
     description: "Calculators, guides, and financial clarity with zero server tracking and full arithmetic visibility.",
-    url: "https://fermor.in",
+    url: "https://fermor-homepage-jjzh.vercel.app",
     siteName: "Fermor",
     locale: "en_IN",
     type: "website",
