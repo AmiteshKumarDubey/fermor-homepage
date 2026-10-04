@@ -75,17 +75,10 @@ src/
 
 ## Screenshots
 
-![Desktop Dark](/docs/screenshots/desktop-dark.svg)
-*Desktop Dark Theme & Hero Playground*
-
-![Mobile Viewport](/docs/screenshots/mobile-390px.svg)
-*Mobile 390px Viewport Layout*
-
-![Light Theme](/docs/screenshots/light-theme.svg)
-*Light Theme Warm Paper Style*
-
-![Command Palette](/docs/screenshots/command-palette.svg)
-*Command Palette (Ctrl+K) Presets*
+![Desktop dark theme](docs/screenshots/desktop-dark.png)
+![Light theme](docs/screenshots/light-theme.png)
+![Mobile 390px](docs/screenshots/mobile-390.png)
+![Command palette](docs/screenshots/command-palette.png)
 
 ---
 
